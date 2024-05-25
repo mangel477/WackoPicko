@@ -9,3 +9,9 @@ jobs:
            name: machineStandalone
            with:
              args: skims scan config.yaml
+             
+         - name: Upload Artifact
+           uses: actions/upload-artifact@v2
+           with:
+             name: skims-results  # Nombre del artefacto
+             path: ./Fluid-Attacks-Results.csv  # Ruta al directorio o archivo que deseas convertir en un artefacto
