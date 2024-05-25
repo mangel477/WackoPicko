@@ -1,0 +1,18 @@
+namespace: WackoPicko
+output:
+  file_path: ./Fluid-Attacks-Results.csv
+  format: CSV
+working_dir: .
+language: ES
+sast:
+  include:
+    - .
+  exclude:
+    - glob(**/node_modules/**)
+    - glob(**/test/**)
+sca:
+  include:
+    - .
+  exclude:
+    - glob(**/test/**)
+strict: true
